@@ -1,0 +1,156 @@
+:root .theme-dark {
+    --bg: rgb(18, 18, 18);
+    --bg2: rgb(10, 10, 10);
+    --fg: rgb(204, 204, 204);
+    --text: rgb(204, 204, 204);
+    --text-high-contrast: rgb(240, 240, 240);
+    --faint-contrast: rgba(40, 40, 40, 0.6);
+    --ghost-contrast: rgba(30, 30, 30, 0.6);
+    --ghost-contrast-alt: rgba(35, 35, 35, 0.6);
+    --mild-contrast: rgb(60, 60, 60);
+    --good-contrast: rgb(180, 180, 180);
+    --success: rgb(86, 156, 79);
+    --warning: rgb(215, 155, 0);
+    --error: rgb(205, 63, 69);
+    --focus-color: rgb(215, 155, 0);
+    --link: rgb(86, 156, 79);
+    --button-bg: rgb(30, 30, 30);
+    --button-text: rgb(215, 155, 0);
+    --button-hover-bg: rgb(50, 50, 50);
+    --button-bg-rgb: 30, 30, 30;
+    --border: rgb(50, 50, 50);
+    --separator: rgb(50, 50, 50);
+    --color: rgb(86, 156, 79);
+    --border-radius: 8px;
+}
+
+.file,
+.folder {
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px;
+    margin: 2px 0;
+    border-radius: var(--border-radius);
+}
+
+.table {
+    background-color: var(--bg2);
+    border-color: var(--border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.table-header {
+    background-color: var(--mild-contrast);
+    color: var(--text-high-contrast);
+    border-color: var(--border);
+}
+
+.table-row.even {
+    background-color: var(--bg);
+}
+
+.table-row.odd {
+    background-color: var(--bg2);
+}
+
+.table-cell:first-child {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.table-cell:last-child {
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.button,
+input[type="button"],
+input[type="submit"] {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: var(--button-hover-bg);
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    border-radius: calc(var(--border-radius) / 2);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--focus-color);
+    text-decoration: underline;
+    background-color: var(--faint-contrast);
+}
+
+input,
+select,
+textarea {
+    background-color: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--mild-contrast);
+    padding: 6px 8px;
+    border-radius: var(--border-radius);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 0 2px var(--faint-contrast);
+}
+
+.breadcrumb {
+    color: var(--good-contrast);
+    background-color: var(--faint-contrast);
+    border-radius: var(--border-radius);
+    margin: 2px;
+}
+
+#server-info {
+    background-color: var(--ghost-contrast);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+#files,
+#folder-links,
+#log,
+#banner,
+#address-box {
+    border-radius: var(--border-radius);
+}
+
+progress,
+meter {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+pre,
+code {
+    border-radius: var(--border-radius);
+    background-color: var(--bg2);
+    padding: 8px;
+    border: 1px solid var(--border);
+}
+
+li {
+    border-radius: calc(var(--border-radius) / 2);
+}
